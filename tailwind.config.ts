@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        primary: "#c22027",
+        secondary: "#6c6c6c",
+      },
+      fontFamily: {
+        aller: ["Aller", "sans-serif"], // Add 'Aller' to Tailwind's fontFamily
       },
     },
   },

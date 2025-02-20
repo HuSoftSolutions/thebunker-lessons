@@ -2,20 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Define the custom font using @font-face */
+
+@font-face {
+  font-family: 'Aller';
+  src: url('/fonts/Aller_Rg.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Aller';
+  src: url('/fonts/Aller_Bd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Apply the custom font to h1 tags globally */
+h1 {
+  font-family: 'Aller', sans-serif;
+	font-size: 75px;
 }
+
+.font-bold {
+  font-family: 'Aller Bd', sans-serif;
+}
+
+.font-thin {
+  font-family: 'Aller', sans-serif;
+}
+
