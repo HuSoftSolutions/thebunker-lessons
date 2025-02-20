@@ -4,31 +4,33 @@
 
 /* Define the custom font using @font-face */
 
+
 @font-face {
   font-family: 'Aller';
-  src: url('/fonts/Aller_Rg.ttf');
-  font-weight: normal;
+  src: url('/fonts/Aller_Rg.ttf') format('truetype');
+  font-weight: 400; /* Regular weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Aller';
   src: url('/fonts/Aller_Bd.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 800; /* Bold weight */
   font-style: normal;
 }
+
 
 /* Apply the custom font to h1 tags globally */
 h1 {
   font-family: 'Aller', sans-serif;
 	font-size: 75px;
+	font-weight: 800
 }
 
-.font-bold {
-  font-family: 'Aller Bd', sans-serif;
-}
 
-.font-thin {
-  font-family: 'Aller', sans-serif;
+.font-aller {
+	font-family: 'Aller', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
 }
 

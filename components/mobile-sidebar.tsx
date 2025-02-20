@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Import hamburger icon from react-icons
@@ -14,11 +15,15 @@ const MobileNavbar = () => {
       {/* Navbar */}
       <nav className="flex items-center justify-between h-20 text-white px-4 w-full z-20">
         <Link href="/" className="block">
-          <img
-            src="/Bunker_Trademarked_Mobile.png"
-            alt="The Bunker"
-            style={{ maxWidth: "170px" }}
-          />
+										<Image
+											src="/Bunker_Trademarked_Mobile.png"
+											alt="The Bunker"
+											layout="responsive"
+											width={300}
+											height={300}
+											className="mx-auto max-w-[170px]"
+											priority
+										/>
         </Link>
         <div className="lg:hidden">
           {/* Show hamburger icon when menu is closed */}

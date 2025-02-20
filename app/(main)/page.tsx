@@ -1,24 +1,33 @@
 "use client";
 
+import { CardContentProps, ProfileCardProps } from "@/interfaces";
+import Image from "next/image";
 import { useEffect } from "react";
 
-const Card = ({ children, className }) => (
+const Card: React.FC<CardContentProps> = ({ children, className }) => (
   <div className={`max-w-sm p-6 rounded-2xl shadow-lg text-center bg-white ${className}`}>
     {children}
   </div>
 );
 
-const CardContent = ({ children, className }) => (
+const CardContent: React.FC<CardContentProps> = ({ children, className }) => (
   <div className={`mt-4 text-gray-700 text-sm ${className}`}>{children}</div>
 );
 
-const ProfileCard = ({ name, title, bio, image }) => {
+const ProfileCard: React.FC<ProfileCardProps> = ({ name, title, bio, image }) => {
   return (
     <Card className="w-full sm:w-[300px] h-auto sm:h-[500px] flex flex-col items-center p-4">
-      <img
+      {/* <img
         src={image || null}
         className="w-24 h-24 rounded-full object-cover border-4 border-gray-200"
-      />
+      /> */}
+			<Image
+          src={image || "https://storage.googleapis.com/thebunker-assets/thebunker/profilepic.png"} // Fallback image
+          alt={`${name}'s profile picture`}
+					width={100}
+					height={100}
+          className="rounded-full object-cover border-4 border-gray-200"
+        />
       <h2 className="mt-4 text-xl font-semibold">{name}</h2>
       <p className="text-gray-500 text-sm">{title}</p>
       <CardContent className="text-center p-4">{bio}</CardContent>
@@ -34,10 +43,16 @@ export default function Home() {
   return (
     <div>
       <section className="relative h-[500px] overflow-hidden">
-        <img
+        {/* <img
           src="https://storage.googleapis.com/thebunker-assets/thebunker/latham-new/FRONT9BAY1.png"
           className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000"
-        />
+        /> */}
+				<Image
+            src="https://storage.googleapis.com/thebunker-assets/thebunker/latham-new/FRONT9BAY1.png"
+            alt="The Bunker Front 9 Bay"
+            fill
+            className="object-cover transition-opacity duration-1000"
+          />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <h1 className="text-4xl sm:text-7xl text-white">LESSONS AT THE BUNKER</h1>
@@ -55,7 +70,7 @@ export default function Home() {
       <section id="coaches" className="flex flex-col justify-center items-center p-10">
         <div className="max-w-[900px] text-center rounded-xl p-5">
           <h1 className="text-green-500 text-[40px]">THE BUNKER COACHES</h1>
-          <p className="text-xl">
+          <p className="text-xl font-aller" >
             More than an instructor. The coaches at The Bunker are here to help
             you improve every aspect of your game. Players seek lessons for a
             number of reasons. Our job is to guide you on your journey to

@@ -1,8 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const routes = [
@@ -16,19 +15,23 @@ const routes = [
 
 
 export default function Sidebar() {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
+  // const [showDropdown, setShowDropdown] = useState(false);
+  // const pathname = usePathname();
+  // const router = useRouter();
 
   return (
     <aside className="fixed left-0 top-0 hidden sm:flex h-screen w-64 bg-black text-white font-bold text-xl flex-col z-50">
       {/* Logo */}
       <div className="p-6">
         <Link href="/" className="block">
-          <img
+          <Image
             src="/Bunker_Trademarked_Desktop.png"
             alt="The Bunker"
+						layout="responsive"
+						width={300}
+						height={300}
             className="w-5/6 mx-auto"
+						priority
           />
         </Link>
       </div>
