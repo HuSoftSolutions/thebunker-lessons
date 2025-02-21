@@ -1,5 +1,4 @@
 import { useState } from "react";
-import {LessonInterestFormProps} from '@/interfaces'
 
 export default function LessonInterestForm() {
   const [name, setName] = useState("");
@@ -15,7 +14,7 @@ export default function LessonInterestForm() {
     return !name || !phone || !email || !locationPreference || !timePreference;
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (formIsInvalid()) {
       setErrorMessage("Please fill out all required fields.");
