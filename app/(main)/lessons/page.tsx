@@ -111,7 +111,7 @@ export default function Lessons() {
         </div>
       </section>
 
-      <section className="p-10 text-center bg-black bg-opacity-90">
+      <section className="p-10 text-center bg-white">
         <h1 className="text-3xl text-green-600">Lesson Rates</h1>
         <div className="mt-6 grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto ">
           <div className="bg-white p-6 shadow-xl rounded-xl hover-grow">
