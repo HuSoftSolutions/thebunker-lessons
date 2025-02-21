@@ -27,6 +27,13 @@ h1 {
 	font-weight: 800
 }
 
+p {
+  font-family: 'Aller', sans-serif;
+}
+
+.hover-grow {
+	@apply transition-all duration-200 ease-in-out hover:scale-105;
+}
 
 .font-aller {
 	font-family: 'Aller', sans-serif;

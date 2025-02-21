@@ -19,8 +19,16 @@ export default function Layout({ children }: LayoutProps) {
         <MobileNavbar />
         <div className="flex-1 overflow-y-auto ml-0 sm:ml-64 sm:mt-0">
           {children}
+					<footer className="bg-green-900 text-white text-center h-20 flex items-center justify-center">
+        <p>
+          &copy; {new Date().getFullYear()} The Bunker Lessons. All Rights Reserved.
+        </p>
+      </footer>
         </div>
+				
       </body>
+
+
     </html>
   );
 }

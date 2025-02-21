@@ -10,20 +10,24 @@ const MobileNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <div className="relative flex sm:hidden w-screen z-50 bg-black">
       {/* Navbar */}
       <nav className="flex items-center justify-between h-20 text-white px-4 w-full z-20">
         <Link href="/" className="block">
-										<Image
-											src="/Bunker_Trademarked_Mobile.png"
-											alt="The Bunker"
-											layout="responsive"
-											width={300}
-											height={300}
-											className="mx-auto max-w-[170px]"
-											priority
-										/>
+          <Image
+            src="/Bunker_Trademarked_Mobile.png"
+            alt="The Bunker"
+            layout="responsive"
+            width={300}
+            height={300}
+            className="mx-auto max-w-[170px]"
+            priority
+          />
         </Link>
         <div className="lg:hidden">
           {/* Show hamburger icon when menu is closed */}
@@ -46,25 +50,20 @@ const MobileNavbar = () => {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex justify-end p-4">
-          {/* <button onClick={toggleMenu} className="text-white text-2xl">
-            ×
-          </button> */}
-        </div>
         <div className="flex flex-col items-center justify-start pt-20 h-full text-white">
-          <Link href="/lessons" className="py-6 text-xl">
+          <Link href="/lessons" className="py-6 text-xl" onClick={closeMenu}>
             Lessons
           </Link>
-          <Link href="/junior-golf" className="py-6 text-xl">
+          <Link href="/junior-golf" className="py-6 text-xl" onClick={closeMenu}>
             Junior Golf
           </Link>
-          <Link href="/club-fitting" className="py-6 text-xl">
+          <Link href="/club-fitting" className="py-6 text-xl" onClick={closeMenu}>
             Club Fitting
           </Link>
-          <Link href="/videos" className="py-6 text-xl">
+          <Link href="/videos" className="py-6 text-xl" onClick={closeMenu}>
             Videos
           </Link>
-					<Link href="/calendar" className="py-6 text-xl">
+          <Link href="/calendar" className="py-6 text-xl" onClick={closeMenu}>
             Calendar
           </Link>
         </div>

@@ -13,5 +13,12 @@ export interface ProfileCardProps {
 	name: string, 
 	title: string, 
 	bio: string, 
-	image?: string
+	image?: string,
+	phone?: string, 
+	email?: string
+}
+type HandleSubmit = (event: React.FormEvent<HTMLFormElement>) => void;
+
+export interface LessonInterestFormProps {
+  handleSubmit: HandleSubmit;
 }
