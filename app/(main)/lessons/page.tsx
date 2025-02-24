@@ -80,7 +80,6 @@ export default function Lessons() {
         </div>
       </section>
 
-
       <section className="p-10 text-center bg-gray-100">
         <h1 className="text-3xl text-green-600">Lesson Rates</h1>
         <div className="mt-6 grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto ">
@@ -151,8 +150,8 @@ export default function Lessons() {
             </p>{" "}
             <ul className="list-disc pl-5 mt-4 space-y-2 text-left">
               <li>
-                <strong>Session 1:</strong> On-course assessment of the
-                students games. 2 ½ hours.
+                <strong>Session 1:</strong> On-course assessment of the students
+                games. 2 ½ hours.
               </li>
               <li>
                 <strong>Session 2:</strong> Group coaching on training
@@ -181,7 +180,6 @@ export default function Lessons() {
           </div>
         </div>
       </section>
-
 
       <section className="p-10 text-center bg-white">
         <h1 className="text-3xl text-green-600">Technology We Use</h1>
