@@ -80,6 +80,109 @@ export default function Lessons() {
         </div>
       </section>
 
+
+      <section className="p-10 text-center bg-gray-100">
+        <h1 className="text-3xl text-green-600">Lesson Rates</h1>
+        <div className="mt-6 grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto ">
+          <div className="bg-white p-6 shadow-xl rounded-xl hover-grow">
+            <h3 className="text-xl font-semibold">Adult Individual</h3>
+            <p>One Hour: $125</p>
+            <p>Half Hour: $65</p>
+          </div>
+          <div className="bg-white p-6 shadow-xl rounded-xl hover-grow">
+            <h3 className="text-xl font-semibold">Junior Individual</h3>
+            <p>One Hour: $100</p>
+            <p>Half Hour: $55</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-10 text-center bg-gray-100">
+        <div className="mt-6 grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="bg-white p-6 shadow-xl rounded-xl hover:shadow-2xl transition-all duration-300">
+            <h1 className="text-3xl text-green-600 font-semibold">
+              Coach Program
+            </h1>
+
+            <p className="mt-4 text-lg text-black font-bold">
+              Our coaches will assess your game, define your goals, and build a
+              step-by-step personalized plan for improvement. The program
+              includes the following lessons:
+            </p>
+            <ul className="list-disc pl-5 mt-4 space-y-2 text-left">
+              <li>
+                <strong>Pre Lesson:</strong> Fill out and return the goal and
+                self-assessment sheet to a Bunker Coach.
+              </li>
+              <li>
+                <strong>Lesson 1:</strong> Assessment of long game, short game,
+                and goals review. 1 hour.
+              </li>
+              <li>
+                <strong>Lesson 2:</strong> On-course evaluation, strategies, and
+                mental/physical assessments. 2 ½ hours.
+              </li>
+              <li>
+                <strong>Lesson 3:</strong> Private lesson working on the
+                personalized program. 1 hour.
+              </li>
+              <li>
+                <strong>Lesson 4:</strong> Continuation of private lessons. 1
+                hour.
+              </li>
+            </ul>
+            <p className="mt-4 text-xl font-semibold text-green-600">
+              Cost: $600 per student
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-10 text-center bg-gray-100">
+        <div className="mt-6 grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="bg-white p-6 shadow-xl rounded-xl hover:shadow-2xl transition-all duration-300">
+            <h1 className="text-3xl text-green-600 font-semibold">
+              Coach Group Program
+            </h1>
+            <p className="mt-4 text-lg text-black font-bold">
+              Coaches will work with students in a group setting to improve
+              their games. Each group receives 12 hours of instruction, with 4-6
+              golfers per group.
+            </p>{" "}
+            <ul className="list-disc pl-5 mt-4 space-y-2 text-left">
+              <li>
+                <strong>Session 1:</strong> On-course assessment of the
+                students' games. 2 ½ hours.
+              </li>
+              <li>
+                <strong>Session 2:</strong> Group coaching on training
+                protocols. 1 ½ hours.
+              </li>
+              <li>
+                <strong>Session 3:</strong> On-course coaching: course strategy
+                and mental/physical focus. 2 ½ hours.
+              </li>
+              <li>
+                <strong>Session 4:</strong> Group coaching on training
+                protocols. 1 ½ hours.
+              </li>
+              <li>
+                <strong>Session 5:</strong> On-course coaching. Taking group
+                coaching to the course. 2 ½ hours.
+              </li>
+              <li>
+                <strong>Session 6:</strong> Final group coaching session on
+                training protocols. 1 ½ hours.
+              </li>
+            </ul>
+            <p className="mt-4 text-xl font-semibold text-green-600">
+              Cost: $600 per student
+            </p>
+          </div>
+        </div>
+      </section>
+
+
       <section className="p-10 text-center bg-white">
         <h1 className="text-3xl text-green-600">Technology We Use</h1>
         <p className="mt-4 text-lg text-black">
@@ -108,22 +211,6 @@ export default function Lessons() {
           >
             Hackmotion
           </a>
-        </div>
-      </section>
-
-      <section className="p-10 text-center bg-white">
-        <h1 className="text-3xl text-green-600">Lesson Rates</h1>
-        <div className="mt-6 grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto ">
-          <div className="bg-white p-6 shadow-xl rounded-xl hover-grow">
-            <h3 className="text-xl font-semibold">Adult Individual</h3>
-            <p>One Hour: $125</p>
-            <p>Half Hour: $65</p>
-          </div>
-          <div className="bg-white p-6 shadow-xl rounded-xl hover-grow">
-            <h3 className="text-xl font-semibold">Junior Individual</h3>
-            <p>One Hour: $100</p>
-            <p>Half Hour: $55</p>
-          </div>
         </div>
       </section>
 
