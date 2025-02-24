@@ -152,7 +152,7 @@ export default function Lessons() {
             <ul className="list-disc pl-5 mt-4 space-y-2 text-left">
               <li>
                 <strong>Session 1:</strong> On-course assessment of the
-                students' games. 2 ½ hours.
+                students games. 2 ½ hours.
               </li>
               <li>
                 <strong>Session 2:</strong> Group coaching on training
