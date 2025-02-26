@@ -21,7 +21,7 @@ export default function JuniorGolf() {
 
 			<section className="bg-white p-10 text-center">
         <h1 className="text-3xl text-green-600">Junior Summer Camp</h1>
-        <p className="mt-2">Our junior summer camp schedule is coming soon! Check back later for details.</p>
+        <p className="my-6"><a className="button" href="https://www.ussportscamps.com/golf/nike/nike-golf-camps-the-bunker" target="_blank">Click Here To Register</a></p>
         <p className="mt-4">For any questions, feel free to contact us.</p>
       </section>
 
