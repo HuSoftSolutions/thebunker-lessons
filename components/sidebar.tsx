@@ -8,8 +8,8 @@ const routes = [
   { id: 1, title: "Lessons", to: "/lessons" },
   { id: 2, title: "Junior Golf", to: "/junior-golf" },
   { id: 3, title: "Club Fitting", to: "/club-fitting" },
-  { id: 4, title: "Videos", to: "/videos" },
-  { id: 5, title: "Calendar", to: "/calendar" },
+  // { id: 4, title: "Videos", to: "/videos" },
+  // { id: 5, title: "Calendar", to: "/calendar" },
   { id: 6, title: "Main Site", to: "https://getinthebunker.golf", external: true },
 ];
 

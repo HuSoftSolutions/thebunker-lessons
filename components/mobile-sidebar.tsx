@@ -60,11 +60,14 @@ const MobileNavbar = () => {
           <Link href="/club-fitting" className="py-6 text-xl" onClick={closeMenu}>
             Club Fitting
           </Link>
-          <Link href="/videos" className="py-6 text-xl" onClick={closeMenu}>
+          {/* <Link href="/videos" className="py-6 text-xl" onClick={closeMenu}>
             Videos
-          </Link>
-          <Link href="/calendar" className="py-6 text-xl" onClick={closeMenu}>
+          </Link> */}
+          {/* <Link href="/calendar" className="py-6 text-xl" onClick={closeMenu}>
             Calendar
+          </Link> */}
+					<Link href="https://getinthebunker.golf" target="_blank" className="py-6 text-xl" onClick={closeMenu}>
+            Main Site
           </Link>
         </div>
       </div>

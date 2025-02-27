@@ -19,6 +19,9 @@
   font-style: normal;
 }
 
+body {
+	@apply overscroll-none;
+}
 
 /* Apply the custom font to h1 tags globally */
 h1 {
