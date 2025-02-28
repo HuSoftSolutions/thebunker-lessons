@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface FormData {
   name: string;
@@ -36,7 +38,7 @@ export default function ClubFitting() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit: HandleSubmit = (e) => {
+  const handleSubmit: HandleSubmit = async (e) => {
     e.preventDefault();
     if (
       !formData.name ||
@@ -49,9 +51,33 @@ export default function ClubFitting() {
       setErrorMessage("Please fill out all required fields.");
       return;
     }
+
     setIsLoading(true);
-    setTimeout(() => {
-      alert("Form submitted! We will get back to you soon.");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/send-email-club-fitting", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send email.");
+      }
+
+      toast.success("Club Fitting Inquiry Submitted!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+
       setFormData({
         name: "",
         phone: "",
@@ -61,9 +87,24 @@ export default function ClubFitting() {
         timePreference: "",
         notes: "",
       });
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+
+      setErrorMessage("Something went wrong. Please try again.");
+    } finally {
       setIsLoading(false);
-      setErrorMessage("");
-    }, 1000);
+    }
   };
 
   return (
@@ -207,6 +248,19 @@ export default function ClubFitting() {
           </button>
         </form>
       </section>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
     </div>
   );
 }
