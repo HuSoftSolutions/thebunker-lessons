@@ -30,12 +30,34 @@ export default function ClubFitting() {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Format phone number as (XXX) XXX-XXXX
+  const formatPhoneNumber = (value: string) => {
+    // Strip all non-numeric characters
+    const phoneNumber = value.replace(/\D/g, "");
+    
+    // Apply formatting based on the length of the input
+    if (phoneNumber.length < 4) {
+      return phoneNumber;
+    } else if (phoneNumber.length < 7) {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+    } else {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+    }
+  };
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    
+    // Apply phone formatting if the input is the phone field
+    if (name === "phone") {
+      setFormData({ ...formData, [name]: formatPhoneNumber(value) });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit: HandleSubmit = async (e) => {
@@ -155,7 +177,7 @@ export default function ClubFitting() {
           Interested in a Club Fitting?
         </h1>
         <p className="mt-2 text-lg text-white">
-          Fill out the form below and we’ll get in touch with you!
+          Fill out the form below and we will get in touch with you!
         </p>
         <form
           onSubmit={handleSubmit}
@@ -179,6 +201,7 @@ export default function ClubFitting() {
             onChange={handleChange}
             required
             className="w-full p-2 border rounded mb-4"
+            maxLength={14} // Length of "(XXX) XXX-XXXX"
           />
           <input
             type="email"
