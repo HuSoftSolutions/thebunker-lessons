@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     }
 
     const msg: MailDataRequired = {
-      to: ["codyhusek@gmail.com"],
+      to: ["sean@getinthebunker.golf"],
       from: process.env.SENDGRID_SENDER_EMAIL as string,
       subject: "New Club Fitting Request",
       text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nFitting Interest: ${fittingInterest}\nLocation: ${locationPreference}\nTime Preference: ${timePreference}\nNotes: ${notes}`,

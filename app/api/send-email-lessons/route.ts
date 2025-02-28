@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     }
 
     const msg: MailDataRequired = {
-      to: ["codyhusek@gmail.com"],
+			to: ["sean@getinthebunker.golf"],
       from: process.env.SENDGRID_SENDER_EMAIL as string,
       subject: "New Lesson Request",
       text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nLocation: ${locationPreference}\nTime Preference: ${timePreference}\nNotes: ${notes}`,
