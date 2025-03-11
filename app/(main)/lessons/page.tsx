@@ -156,6 +156,11 @@ export default function Lessons() {
             <p>One Hour: $100</p>
             <p>Half Hour: $55</p>
           </div>
+					<div className="bg-white p-6 shadow-xl rounded-xl hover-grow">
+            <h3 className="text-xl font-semibold">9 Hole Playing Lesson</h3>
+            <p>$200 inside at <span className="text-gray-600 font-bold">any Bunker location</span> or outdoors at <span className="text-gray-600 font-bold">Shaker Ridge Country Club</span> or <span className="text-gray-600 font-bold">Olde Kinderhook Golf Club</span></p>
+            
+          </div>
         </div>
       </section>
 
